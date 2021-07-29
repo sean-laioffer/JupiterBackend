@@ -1,13 +1,12 @@
 package com.laioffer.jupiter.servlet;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
+import javax.servlet.*;
 import javax.servlet.http.*;
+import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "ServletLogoutServlet", value = "/logout")
-public class ServletLogoutServlet extends HttpServlet {
-
+@WebServlet(name = "LogoutServlet", value = "/LogoutServlet")
+public class LogoutServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession(false);
